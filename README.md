@@ -4,6 +4,7 @@ fonte dati: dataset Carbo-Loading di dunnhumby
 Tabelle usate: dh_transactions, dh_product_lookup, dh_causal_lookup. I file originali non sono inclusi nel repository per le dimensioni.
 
 # Metodo
+
 SQL
 Importazione dei tre file CSV in DB browser for SQLite.
 Aggregazione in SQL: le transazioni (una riga per articolo acquistato) sono raggruppate per settimana, negozio e prodotto; poi collegate a categoria e brand (JOIN) e alle promozioni (LEFT JOIN). Sono stati creati indici su upc, store, week per velocizzare le query.
