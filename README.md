@@ -3,14 +3,14 @@ progetto personale di analisi dati
 fonte dati: dataset Carbo-Loading di dunnhumby
 Tabelle usate: dh_transactions, dh_product_lookup, dh_causal_lookup. I file originali non sono inclusi nel repository per le dimensioni.
 
-Metodo
-
+# Metodo
+# SQL
 Importazione dei tre file CSV in DB browser for SQLite.
 Aggregazione in SQL: le transazioni (una riga per articolo acquistato) sono raggruppate per settimana, negozio e prodotto; poi collegate a categoria e brand (JOIN) e alle promozioni (LEFT JOIN). Sono stati creati indici su upc, store, week per velocizzare le query.
 Classificazione delle promo in cinque stati: solo volantino, solo display, volantino + display, nessuna, N/D.
 Tabella finale di 11.221 righe (settimana, categoria, brand, tipo promo, osservazioni, vendite, unità), esportata in CSV.
 Query utilizzata:
-CREATE INDEX IF NOT EXISTS idx_t ON dh_transactions(upc, store, week);
+```CREATE INDEX IF NOT EXISTS idx_t ON dh_transactions(upc, store, week);
 CREATE INDEX IF NOT EXISTS idx_c ON dh_causal_lookup(upc, store, week);
 CREATE TABLE vendite_promo AS
 WITH base AS (
@@ -39,10 +39,10 @@ FROM base b
 JOIN dh_product_lookup p ON p.upc = b.upc
 LEFT JOIN dh_causal_lookup c
   ON c.upc = b.upc AND c.store = b.store AND c.week = b.week 
-GROUP BY 1,2,3,4;
+GROUP BY 1,2,3,4;```
 
 [sql for dunnhumby-carbo.sql](https://github.com/user-attachments/files/34928691/sql.for.dunnhumby-carbo.sql)
-
+# Excel
 Excel: importazione con Power Query, colonna anno (settimane 1-52 = Anno 1, 53-104 = Anno 2), Modello dati, pivot e dashboard.
 Il totale delle vendite è stato confrontato in SQL ed Excel, il valore coincide (9.130.079,89 $), quindi i JOIN non hanno perso né duplicato righe.
 
