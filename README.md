@@ -17,6 +17,7 @@ The Excel workbook has two views, both built on the same Data Model.
 
 ## Data
 Source: public dataset Carbo-Loading from dunnhumby
+
 |Item|Values|
 |---|---|
 | Period | 104 weeks (2 years) |
@@ -40,7 +41,7 @@ The original files are not included because of their size. They can be downloade
 6. **Uplift** = average units per observation with promotion ÷ average units per observation without promotion − 1, where an observation is one product-store-week combination. The average is a DAX measure: DIVIDE(SUM(Units), SUM(Observations)).
 7. **Brand view**: DAX measures (Total sales, Share of total sales, Average price, Year over year growth) and a slicer on brand connected to the brand pivots. The Corporate pivots are not connected to the slicer.
 
-Total sales were compared at three points: the original transactions table, the SQL output and Excel. All match ($9,130,079.89), so the joins neither lost nor duplicated rows.
+Total sales were compared at three points: the original transactions table, the SQL output and Excel. All match ($9.130.079,89), so the joins neither lost nor duplicated rows.
 
 Query used:
 ```sql
@@ -136,12 +137,12 @@ Uplift vs. no promotion:
 
 - Feature + display gives the highest uplift in all four categories.
 - In pasta, pasta sauce and syrups, display only beats feature only. In pancake mixes the opposite is true (+131% vs +54%).
-- Pasta and pasta sauce have large groups in every column, so their results are the most stable. Pancake mixes and syrups rest on far fewer observations, so their uplift is less stable.
+- Pasta and pasta sauce have large groups in every column, so their results are the most stable. Pancake mixes with feature only (676) and with feature + display (648), and syrups with feature + display (246) rest on far fewer observations than the others so their uplift is less stable.
 
 **Repostory contents**
 - README.md
 - [sql for dunnhumby-carbo.sql](https://github.com/user-attachments/files/34928691/sql.for.dunnhumby-carbo.sql):SQL query
 - (https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx): Excel analysis file
-- screenshots/dashboard_corporate.png, dashboard_brand_all.png, dashboard_brand_barilla.png: dashboard images
+- screenshots/dashboard_corporate.png, dashboard_all_brand.png, dashboard_brand_barilla.png: dashboard images
 
 Author: Laura Pauletto
