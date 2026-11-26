@@ -1,9 +1,21 @@
-# vendite-dunnhumby-Carbo-Loading
-progetto personale di analisi dati
-fonte dati: dataset Carbo-Loading di dunnhumby
-Tabelle usate: dh_transactions, dh_product_lookup, dh_causal_lookup. I file originali non sono inclusi nel repository per le dimensioni.
+# Sales and promotion analysis: dunnhumby Carbo-Loading
+Personal data analysis project that simulates periodic reporting for brand teams and corporate management. The objective of this dashboard is to present relevant metrics about sales and KPIs for 4 food categories (pasta, pasta sauce, syrups and pancake mixes) from the dunnhumby Carbo-Loading dataset, and to measure the uplift in unit sales during in-store display and flyer promotions.
 
-# Metodo
+## Data
+Source: public dataset Carbo-Loading from dunnhumby
+|Item|Values|
+|---|---|
+| Period | 104 weeks (2 years) |
+| Categories | 4 (pasta, pasta sauce, syrups, pancake mixes) |
+| Products / brands | 927 products, 131 brands |
+| Transactions | about 5.2 million rows |
+| Total sales | $9,130,079.89 |
+
+Tables used: dh_transactions, dh_product_lookup, dh_causal_lookup.
+
+The original files are not included because of their size. They can be downloaded from the [dunnhumby Source Files page](https://www.dunnhumby.com/source-files/).
+
+## Method 
 
 SQL
 Importazione dei tre file CSV in DB browser for SQLite.
