@@ -1,6 +1,16 @@
 # Sales and promotion analysis: dunnhumby Carbo-Loading
 Personal data analysis project that simulates periodic reporting for brand teams and corporate management. The objective of this dashboard is to present relevant metrics about sales and KPIs for 4 food categories (pasta, pasta sauce, syrups and pancake mixes) from the dunnhumby Carbo-Loading dataset, and to measure the uplift in unit sales during in-store display and flyer promotions.
 
+## Dashboard
+
+The Excel workbook has two views, both built on the same Data Model.
+
+!!inserisci link excel
+
+**Corporate view**: summary for management with total sales, top brand, top category, uplift of feature + display, weekly sales by year, sales by category, top 10 brands and promo uplift by category.
+
+**Brand view**: a slicer selects any of the 131 brands and updates four KPIs (total sales, share of total sales, average price per unit, year-over-year growth), three charts (weekly sales, sales by category, average units by promo type) and a table with the number of observations behind each promo type.
+
 ![Corporate dashboard](screenshots/dashboard_corporate.png)
 ![Corporate dashboard](screenshots/dashboard_all_brand.png)
 ![Corporate dashboard](screenshots/dashboard_brand_barilla.png)
@@ -104,6 +114,7 @@ Year and week of year were added in Power Query.
 **Sales**
 - Total sales are $9.13M over 104 weeks. Year 2 is +5.3% vs Year 1 ($4.68M vs $4.45M).
 - Weekly sales follow a very similar pattern in both years, with a clear peak in week 27 of each year. The cause was not investigated.
+  
 **Categories and brands**
 - Pasta sauce (44.1%) and pasta (31.2%) make up about 75% of sales; syrups account for 19.1% and pancake mixes for 5.6%.
 - Sales are concentrated: the top 10 brands represent 75.1% of total sales. The largest are Private Label (19.2%), Ragu (16.4%), Prego (8.8%), Barilla (6.7%) and Aunt Jemima (6.2%).
@@ -112,6 +123,7 @@ Year and week of year were added in Power Query.
 **Promotions** (weeks 43-104 only)
 - Only about 8% of product-store-week combinations had a flyer or display.
 - Average units sold per product-store-week are higher in every promoted group than without promotion.
+
 Uplift vs. no promotion:
 
 | Category | Display only | Feature only | Feature + display |
@@ -126,16 +138,7 @@ Uplift vs. no promotion:
 - In pasta, pasta sauce and syrups, display only beats feature only. In pancake mixes the opposite is true (+131% vs +54%).
 - Pasta and pasta sauce have large groups in every column, so their results are the most stable. Pancake mixes and syrups rest on far fewer observations, so their uplift is less stable.
 
-## Dashboard
-
-The Excel workbook has two views, both built on the same Data Model.
-
-**Corporate view** (image above): summary for management with total sales, top brand, top category, uplift of feature + display, weekly sales by year, sales by category, top 10 brands and promo uplift by category.
-
-**Brand view**: a slicer selects any of the 131 brands and updates four KPIs (total sales, share of total sales, average price per unit, year-over-year growth), three charts (weekly sales, sales by category, average units by promo type) and a table with the number of observations behind each promo type.
-
-![Brand view, all brands](screenshots/dashboard_brand_all.png)
-![Brand view, Barilla selected](screenshots/dashboard_brand_barilla.png)
-
-Example: Barilla has $608,821 in sales (6.7% of the total), sold only in pasta and pasta sauce, at an average price of $1.29 per unit (all brands: $1.47). Its sales fell 1.2% in Year 2, while total sales grew 5.3%. Its promotion groups with a display are small (884 observations for display only and 355 for feature + display, against 149,784 without promotion), so brand-level uplift should be read with caution.
-
+**Repostory contents**
+- README.md
+- [sql for dunnhumby-carbo.sql](https://github.com/user-attachments/files/34928691/sql.for.dunnhumby-carbo.sql):SQL query
+-  
