@@ -33,7 +33,7 @@ The original files are not included because of their size. They can be downloade
 ## Method 
 **Tools**: SQL (DB Browser for SQLite), Excel (Power Query, Pivot Tables, Pivot charts, DAX measures)
 
-1. **Import** of the 3 CSV files into DB browser for SQLite.
+1. **Import** of the 3 CSV files into DB Browser for SQLite.
 2. **Aggregation in SQL**: transactions (one row per item) are grouped by week, store and product; joined to category and brand (JOIN) and to promotions (LEFT JOIN). Indexes on upc, store, week speed up the joins.
 3. **Promotion classification** into five states: no promo, display only, feature only, feature + display, N/A.
 4. **Final table** of 11.221 rows (week, category, brand, promo type, observations, sales, units), exported to CSV.
@@ -89,6 +89,7 @@ The SQL output uses Italian labels, which were translated to English in Power Qu
 | vendite | Sales |
 | unita | Units |
 
+
 | Promo label in SQL | Label in Excel |
 |---|---|
 | nessuna | no promo |
@@ -137,12 +138,12 @@ Uplift vs. no promotion:
 
 - Feature + display gives the highest uplift in all four categories.
 - In pasta, pasta sauce and syrups, display only beats feature only. In pancake mixes the opposite is true (+131% vs +54%).
-- Pasta and pasta sauce have large groups in every column, so their results are the most stable. Pancake mixes with feature only (676) and with feature + display (648), and syrups with feature + display (246) rest on far fewer observations than the others so their uplift is less stable.
+- Pasta and pasta sauce have large groups in every column, so their results are the most stable. Pancake mixes with feature only (676) and with feature + display (648), and syrups with feature + display (246) rest on far fewer observations than the others, so their uplift is less stable.
 
 ## Repository contents
 - README.md
 - [`sql_dunnhumby_carbo.sql`](sql_dunnhumby_carbo.sql):SQL query
-- (https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx): Excel analysis workbook
+- [`analysis dunnhumby.xlsx`](https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx): Excel analysis workbook
 - screenshots/dashboard_corporate.png, dashboard_all_brand.png, dashboard_brand_barilla.png: dashboard images
 
 Author: Laura Pauletto
