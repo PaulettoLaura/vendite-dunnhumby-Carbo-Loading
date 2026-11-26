@@ -5,7 +5,7 @@ Personal data analysis project that simulates periodic reporting for brand teams
 
 The Excel workbook has two views, both built on the same Data Model.
 
-[download excel files] (https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx) 
+[Excel file](https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx) 
 
 **Corporate view**: summary for management with total sales, top brand, top category, uplift of feature + display, weekly sales by year, sales by category, top 10 brands and promo uplift by category.
 
