@@ -1,5 +1,6 @@
 # Sales and promotion analysis: dunnhumby Carbo-Loading
 Personal data analysis project that simulates periodic reporting for brand teams and corporate management. The objective of this dashboard is to present relevant metrics about sales and KPIs for 4 food categories (pasta, pasta sauce, syrups and pancake mixes) from the dunnhumby Carbo-Loading dataset, and to measure the uplift in unit sales during in-store display and flyer promotions.
+
 ![Corporate dashboard](screenshots/dashboard_corporate.png)
 ![Corporate dashboard](screenshots/dashboard_all_brand.png)
 ![Corporate dashboard](screenshots/dashboard_brand_barilla.png)
