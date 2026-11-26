@@ -101,6 +101,40 @@ Year and week of year were added in Power Query.
 ## Key findings
 
 **Sales**
-- Total sales are **$9.13M** over 104 weeks. Year 2 is **+5.3%** vs Year 1 ($4.68M vs $4.45M).
-- Weekly sales are stable and follow a very similar pattern in both years, with a clear peak in **week 27** of each year (about $115K in Year 1 and $132K in Year 2). The cause was not investigated.
+- Total sales are $9.13M over 104 weeks. Year 2 is +5.3% vs Year 1 ($4.68M vs $4.45M).
+- Weekly sales follow a very similar pattern in both years, with a clear peak in week 27 of each year. The cause was not investigated.
+**Categories and brands**
+- Pasta sauce (44.1%) and pasta (31.2%) make up about 75% of sales; syrups account for 19.1% and pancake mixes for 5.6%.
+- Sales are concentrated: the top 10 brands represent 75.1% of total sales. The largest are Private Label (19.2%), Ragu (16.4%), Prego (8.8%), Barilla (6.7%) and Aunt Jemima (6.2%).
+- *Private Label, Private Label Premium and Private Label Value are separate brands in the source data and are kept separate here.*
+
+**Promotions** (weeks 43-104 only)
+- Only about 8% of product-store-week combinations had a flyer or display.
+- Average units sold per product-store-week are higher in every promoted group than without promotion.
+Uplift vs. no promotion:
+
+| Category | Display only | Feature only | Feature + display |
+|---|---|---|---|
+| Pancake mixes | +54% | +131% | +262% |
+| Pasta | +126% | +30% | +206% |
+| Pasta sauce | +63% | +52% | +251% |
+| Syrups | +81% | +38% | +161% |
+| **All categories** | **+79%** | **+43%** | **+229%** |
+
+- Feature + display gives the highest uplift in all four categories.
+- In pasta, pasta sauce and syrups, display only beats feature only. In pancake mixes the opposite is true (+131% vs +54%).
+- Pasta and pasta sauce have large groups in every column, so their results are the most stable. Pancake mixes and syrups rest on far fewer observations, so their uplift is less stable.
+
+## Dashboard
+
+The Excel workbook has two views, both built on the same Data Model.
+
+**Corporate view** (image above): summary for management with total sales, top brand, top category, uplift of feature + display, weekly sales by year, sales by category, top 10 brands and promo uplift by category.
+
+**Brand view**: a slicer selects any of the 131 brands and updates four KPIs (total sales, share of total sales, average price per unit, year-over-year growth), three charts (weekly sales, sales by category, average units by promo type) and a table with the number of observations behind each promo type.
+
+![Brand view, all brands](screenshots/dashboard_brand_all.png)
+![Brand view, Barilla selected](screenshots/dashboard_brand_barilla.png)
+
+Example: Barilla has $608,821 in sales (6.7% of the total), sold only in pasta and pasta sauce, at an average price of $1.29 per unit (all brands: $1.47). Its sales fell 1.2% in Year 2, while total sales grew 5.3%. Its promotion groups with a display are small (884 observations for display only and 355 for feature + display, against 149,784 without promotion), so brand-level uplift should be read with caution.
 
