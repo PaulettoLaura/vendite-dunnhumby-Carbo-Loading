@@ -139,10 +139,10 @@ Uplift vs. no promotion:
 - In pasta, pasta sauce and syrups, display only beats feature only. In pancake mixes the opposite is true (+131% vs +54%).
 - Pasta and pasta sauce have large groups in every column, so their results are the most stable. Pancake mixes with feature only (676) and with feature + display (648), and syrups with feature + display (246) rest on far fewer observations than the others so their uplift is less stable.
 
-**Repostory contents**
+## Repository contents
 - README.md
-- [sql for dunnhumby-carbo.sql](https://github.com/user-attachments/files/34928691/sql.for.dunnhumby-carbo.sql):SQL query
-- (https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx): Excel analysis file
+- [`sql_dunnhumby_carbo.sql`](sql_dunnhumby_carbo.sql):SQL query
+- (https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx): Excel analysis workbook
 - screenshots/dashboard_corporate.png, dashboard_all_brand.png, dashboard_brand_barilla.png: dashboard images
 
 Author: Laura Pauletto
