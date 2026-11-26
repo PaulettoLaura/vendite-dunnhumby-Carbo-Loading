@@ -77,7 +77,7 @@ LEFT JOIN dh_causal_lookup c
 GROUP BY 1,2,3,4;
 ```
 
-[sql for dunnhumby-carbo.sql](https://github.com/user-attachments/files/34928691/sql.for.dunnhumby-carbo.sql)
+[sql_dunnhumby_carbo.sql](https://github.com/user-attachments/files/34928691/sql.for.dunnhumby-carbo.sql)
 
 The SQL output uses Italian labels, which were translated to English in Power Query.
 
