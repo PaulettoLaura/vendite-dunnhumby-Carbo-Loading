@@ -5,7 +5,7 @@ Personal data analysis project that simulates periodic reporting for brand teams
 
 The Excel workbook has two views, both built on the same Data Model.
 
-[Excel file](https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx) 
+[Excel analysis workbook](https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx) 
 
 **Corporate view**: summary for management with total sales, top brand, top category, uplift of feature + display, weekly sales by year, sales by category, top 10 brands and promo uplift by category.
 
@@ -141,4 +141,7 @@ Uplift vs. no promotion:
 **Repostory contents**
 - README.md
 - [sql for dunnhumby-carbo.sql](https://github.com/user-attachments/files/34928691/sql.for.dunnhumby-carbo.sql):SQL query
--  
+- (https://github.com/PaulettoLaura/vendite-dunnhumby-Carbo-Loading/blob/main/analysis%20dunnhumby.xlsx): Excel analysis file
+- screenshots/dashboard_corporate.png, dashboard_brand_all.png, dashboard_brand_barilla.png: dashboard images
+
+Author: Laura Pauletto
