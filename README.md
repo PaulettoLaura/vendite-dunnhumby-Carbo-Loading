@@ -1,5 +1,5 @@
 # Sales and promotion analysis: dunnhumby Carbo-Loading
-Personal data analysis project that simulates periodic reporting for brand teams and corporate management. The objective of this dashboard is to present relevant metrics about sales and KPIs for 4 food categories (pasta, pasta sauce, syrups and pancake mixes) from the dunnhumby Carbo-Loading dataset, and to measure the uplift in unit sales during in-store display and flyer promotions.
+Personal data analysis project that simulates periodic reporting for brand teams and corporate management. The objective of this dashboard is to present relevant metrics about sales and KPIs for four food categories (pasta, pasta sauce, syrups and pancake mixes) from the dunnhumby Carbo-Loading dataset, and to measure the uplift in unit sales during in-store display and flyer promotions.
 
 ## Dashboard
 
@@ -23,7 +23,7 @@ Source: public dataset Carbo-Loading from dunnhumby
 | Period | 104 weeks (2 years) |
 | Categories | 4 (pasta, pasta sauce, syrups, pancake mixes) |
 | Products / brands | 927 products, 131 brands |
-| Transactions | about 5.2 million rows |
+| Transactions | about 5,2 million rows |
 | Total sales | $9.130.079,89 |
 
 Tables used: dh_transactions, dh_product_lookup, dh_causal_lookup.
@@ -114,12 +114,12 @@ Year and week of year were added in Power Query.
 ## Key findings
 
 **Sales**
-- Total sales are $9.13M over 104 weeks. Year 2 is +5.3% vs Year 1 ($4.68M vs $4.45M).
+- Total sales are $9,13M over 104 weeks. Year 2 is +5,3% vs Year 1 ($4,68M vs $4,45M).
 - Weekly sales follow a very similar pattern in both years, with a clear peak in week 27 of each year. The cause was not investigated.
   
 **Categories and brands**
-- Pasta sauce (44.1%) and pasta (31.2%) make up about 75% of sales; syrups account for 19.1% and pancake mixes for 5.6%.
-- Sales are concentrated: the top 10 brands represent 75.1% of total sales. The largest are Private Label (19.2%), Ragu (16.4%), Prego (8.8%), Barilla (6.7%) and Aunt Jemima (6.2%).
+- Pasta sauce (44,1%) and pasta (31,2%) make up about 75% of sales; syrups account for 19,1% and pancake mixes for 5,6%.
+- Sales are concentrated: the top 10 brands represent 75,1% of total sales. The largest are Private Label (19,2%), Ragu (16,4%), Prego (8,8%), Barilla (6,7%) and Aunt Jemima (6,2%).
 - *Private Label, Private Label Premium and Private Label Value are separate brands in the source data and are kept separate here.*
 
 **Promotions** (weeks 43-104 only)
